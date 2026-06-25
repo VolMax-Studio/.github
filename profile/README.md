@@ -19,7 +19,7 @@ flatter a number.
 
 ---
 
-### The method → [P10 Verification Method](https://github.com/VolMax-Studio/Battery_Health_Portfolio)
+### The method → [P10 Verification Method](https://github.com/VolMax-Studio/Battery_Health_Portfolio/blob/main/P10_method_public.md)
 
 Every finding here is produced by one procedure: reduce to first principles → hunt
 interpretation artifacts (leakage, inflation, curation) → compare to state of the art →
@@ -32,12 +32,12 @@ constraint that narrows an overclaim. We apply it to our own work first.
 
 | Repository | What it is |
 |---|---|
-| **Battery_Health_Portfolio** | The flagship. NASA PCoE + Severson/Attia, DOI-archived. Honest findings led by their limits; every number regenerates from `reproduce.py`. Includes the worked example where we caught our own pipeline overclaiming three times. |
-| **Power_Signal_Tools_Portfolio** | Verified signal-processing library (RMS, THD, DWT, Hilbert), test-covered. The measurement layer the audits stand on. |
+| **[Battery_Health_Portfolio](https://github.com/VolMax-Studio/Battery_Health_Portfolio)** | The flagship. NASA PCoE + Severson/Attia, DOI-archived. Honest findings led by their limits; every number regenerates from `reproduce.py`. Includes the worked example where we caught our own pipeline overclaiming three times. |
+| **[Power_Signal_Tools_Portfolio](https://github.com/VolMax-Studio/Power_Signal_Tools_Portfolio)** | Verified signal-processing library (RMS, THD, DWT, Hilbert), test-covered. The measurement layer the audits stand on. |
+| **[Transformer_Health_Portfolio](https://github.com/VolMax-Studio/Transformer_Health_Portfolio)** | Hierarchical DGA fault diagnosis, with tested boundaries. |
+| **[PV_Anomaly_Detection](https://github.com/VolMax-Studio/PV_Anomaly_Detection)** | PV fault detection on real NREL data + injected benchmarks, honestly framed. |
+| **[Data_Center_Efficiency](https://github.com/VolMax-Studio/Data_Center_Efficiency)** | The "PUE Loophole" audit — how PSU conversion losses mask real facility savings. |
 
-| **Transformer_Health_Portfolio** | Hierarchical DGA fault diagnosis, with tested boundaries. |
-| **PV_Anomaly_Detection** | PV fault detection on real NREL data + injected benchmarks, honestly framed. |
-| **Data_Center_Efficiency** | The "PUE Loophole" audit — how PSU conversion losses mask real facility savings. |
 
 ---
 
