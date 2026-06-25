@@ -19,7 +19,8 @@ flatter a number.
 
 ---
 
-### The method → [P10 Verification Method](https://github.com/VolMax-Studio/Battery_Health_Portfolio/blob/main/P10_method_public.md)
+### The method → [P10 Verification Method](https://github.com/VolMax-Studio/P10-Verification-Method)
+
 
 Every finding here is produced by one procedure: reduce to first principles → hunt
 interpretation artifacts (leakage, inflation, curation) → compare to state of the art →
