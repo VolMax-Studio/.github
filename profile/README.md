@@ -1,56 +1,51 @@
 # VolMax Studio Lab
 
-**Independent verification for battery and energy-system ML.**
-Power electronics + domain-grounded machine learning. We don't build your model — we
-check whether its numbers survive contact with data they haven't seen.
+**Independent verification of battery & energy-storage claims — models, telemetry, and operational data.**
+
+The energy-storage market runs on confident numbers: "98% SOH accuracy," "grid limits never violated," "10-year RUL." We provide the independent check — whether the claim comes from a machine-learning model or a 100 MW asset's operating record.
+
+We do not audit companies. We audit **claims**.
 
 ---
 
-### What we do
+## The P10 Verification Method
 
-Most battery state-of-health and remaining-useful-life models are graded by the team that
-built them. That conflict of interest is why a model reporting 98% accuracy in the lab can
-collapse on a new cell. VolMax is the independent check: leakage detection, metric-integrity
-audits, physical-consistency verification, and uncertainty calibration — on batteries,
-power signals, transformers, PV, and grid data.
+Every audit runs under [P10](https://github.com/VolMax-Studio/P10-Verification-Method) — an ordered, halt-on-failure protocol: **L0** admissibility (license & data access) → **L1** data integrity → **L2** physics compliance → **L3** statistical integrity → **L4** reproducibility → **L5** verdict. Every published number regenerates from a single script against hash-pinned data.
 
-Independence is the product. We do not sell a competing model, so we have no incentive to
-flatter a number.
+Verdict vocabulary:
 
----
+- **Verified** — the data supports the claim as stated.
+- **Verified with Limitations** — the claim holds within stated boundaries (resolution floors, descriptive bands, data provenance caveats).
+- **Not Verified** — the data does not support the claim; includes our own rejected hypotheses.
+- **Unfalsifiable-as-Stated** — the claim cannot be independently tested from publicly available data as currently published.
 
-### The method → [P10 Verification Method](https://github.com/VolMax-Studio/P10-Verification-Method)
+The protocol applies to our own work first: see the [public rejection notice](https://github.com/VolMax-Studio/P10-Verification-Method/blob/main/REJECTION_NOTICE_v1.1.md) for a proposed protocol extension that failed its own admissibility rules.
 
+## Evidence Registry
 
-Every finding here is produced by one procedure: reduce to first principles → hunt
-interpretation artifacts (leakage, inflation, curation) → compare to state of the art →
-deliver a reproducible verdict. The caveat is the mechanism: each correction comes from a
-constraint that narrows an overclaim. We apply it to our own work first.
+All audits are DOI-archived on Zenodo with pinned data hashes and a reproducible pipeline. Verdicts below are quoted verbatim from each report's verdict ledger.
 
----
+| Claim under test | Subject | Verdict | Record |
+|---|---|---|---|
+| FCA regime transition from July 2025 | ECO STOR Bollingstedt BESS (103.5 MW, DE) | Verified with Limitations | [10.5281/zenodo.21135862](https://doi.org/10.5281/zenodo.21135862) |
+| "Grid limits never violated" | ECO STOR Bollingstedt BESS | Verified with Limitations | [10.5281/zenodo.21135862](https://doi.org/10.5281/zenodo.21135862) |
+| Netzdienlich (grid-supportive) operation | ECO STOR Bollingstedt BESS | Consistent with claim; intent not distinguishable from price-driven dispatch | [10.5281/zenodo.21135862](https://doi.org/10.5281/zenodo.21135862) |
+| 5-minute dispatch conformance | AEMO NEM BESS fleet (16 units ≥50 MW, AU) | Verified (descriptive band; not a regulatory determination) | [10.5281/zenodo.21190094](https://doi.org/10.5281/zenodo.21190094) |
+| Cross-jurisdictional generalization of operational signatures (our hypothesis) | AEMO fleet vs. European reference | Not Verified — hypothesis rejected | [10.5281/zenodo.21190094](https://doi.org/10.5281/zenodo.21190094) |
+| Unit-level FCAS response (Hornsdale) | AEMO NEM | Unfalsifiable-as-Stated — public 4-second telemetry withdrawn under FPP | [10.5281/zenodo.21190094](https://doi.org/10.5281/zenodo.21190094) |
+| SOH early-prediction uncertainty under distribution shift | UQ / conformal prediction audit | UQ necessary but not sufficient under shift | [10.5281/zenodo.21084102](https://doi.org/10.5281/zenodo.21084102) |
+| EKF state-estimation replication | Published SOC/thermal estimator | Replicated with documented deviations | [10.5281/zenodo.21009974](https://doi.org/10.5281/zenodo.21009974) |
 
-### Start here
+*(Registry rows are added only after a report is frozen and its DOI is live. Exploratory analyses — no verdict issued — are published separately on GitHub and are not listed here.)*
 
-| Repository | What it is |
-|---|---|
-| **[Battery_Health_Portfolio](https://github.com/VolMax-Studio/Battery_Health_Portfolio)** | The flagship. NASA PCoE + Severson/Attia, DOI-archived. Honest findings led by their limits; every number regenerates from `reproduce.py`. Includes the worked example where we caught our own pipeline overclaiming three times. |
-| **[Power_Signal_Tools_Portfolio](https://github.com/VolMax-Studio/Power_Signal_Tools_Portfolio)** | Verified signal-processing library (RMS, THD, DWT, Hilbert), test-covered. The measurement layer the audits stand on. |
-| **[Transformer_Health_Portfolio](https://github.com/VolMax-Studio/Transformer_Health_Portfolio)** | Hierarchical DGA fault diagnosis, with tested boundaries. |
-| **[PV_Anomaly_Detection](https://github.com/VolMax-Studio/PV_Anomaly_Detection)** | PV fault detection on real NREL data + injected benchmarks, honestly framed. |
-| **[Data_Center_Efficiency](https://github.com/VolMax-Studio/Data_Center_Efficiency)** | The "PUE Loophole" audit — how PSU conversion losses mask real facility savings. |
+## Foundational portfolio
 
-
----
-
-### What we publish vs. what stays private
-
-We publish methods, principles, and worked examples on **public datasets** — that's the
-proof of competence that replaces a CV. Client data, client-specific code, and paid
-audit deliverables stay private. A verifier nobody can check is a verifier nobody hires.
+The audit practice is grounded in two decades of hands-on power-electronics and power-systems work (DE / NL / RS) and a build portfolio spanning battery SOH modeling, power-quality analysis, NILM, condition monitoring, and embedded telemetry. Those repositories remain public below as domain groundwork; they are builds, not audits, and carry no P10 verdicts.
 
 ---
 
-*Physics doesn't lie. Sensors don't lie. We stand at the gap between the measurement and
-the claim, and check the rest.*
+**Engagements:** independent battery & BESS audits under P10 — SOH/RUL model verification, operational-claims verification from field data, reproducibility and data-leakage checks.
 
-**VolMax Studio Lab d.o.o.** · Serbia · independent energy-ML verification
+**Contact:** volmax.contact@gmail.com · [volmax-studio.rs](https://volmax-studio.rs) · [LinkedIn](https://www.linkedin.com/in/ivan-nestorov-274157371) · Zenodo: [Ivan Nestorov](https://zenodo.org/search?q=Nestorov%2C%20Ivan)
+
+VolMax Studio Lab d.o.o. · Titel, Serbia
