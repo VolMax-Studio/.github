@@ -22,10 +22,10 @@ All audits are DOI-archived on Zenodo with pinned data hashes and a reproducible
 | Energy storage capacity (480 MWh claim) | esVolta Anole BESS (240 MW / 480 MWh, US-TX) | Verified with Limitations (Claim Demonstrated) | [10.5281/zenodo.21304135](https://doi.org/10.5281/zenodo.21304135) |
 | SoC telemetry consistency | esVolta Anole BESS | Inconsistent (per frozen rule; 55.2% pass overall; exploratory major event stratification 81.8% pass) | [10.5281/zenodo.21304135](https://doi.org/10.5281/zenodo.21304135) |
 | SoC telemetry semantics | esVolta Anole BESS | Deferred (Peak SoC observed = 558.0 MWh, +78.0 MWh; max_soc = 560.3 MWh, +80.3 MWh above nameplate) | [10.5281/zenodo.21304135](https://doi.org/10.5281/zenodo.21304135) |
-| Active power export capacity (100 MW claim) | Bat Cave BESS (100 MW / 100 MWh, US-TX) | Not Demonstrated (Bounded) | [10.5281/zenodo.21401796](https://doi.org/10.5281/zenodo.21401796) |
-| Energy storage capacity (100 MWh claim) | Bat Cave BESS (100 MW / 100 MWh, US-TX) | Not Demonstrated (Not Verified) | [10.5281/zenodo.21401796](https://doi.org/10.5281/zenodo.21401796) |
-| SoC telemetry consistency | Bat Cave BESS | Inconsistent (1.22% pass rate; mean consistency ratio: 0.6339) | [10.5281/zenodo.21401796](https://doi.org/10.5281/zenodo.21401796) |
-| SoC telemetry semantics | Bat Cave BESS | Deferred (Peak SoC observed = 102.95 MWh, +2.95 MWh above nameplate) | [10.5281/zenodo.21401796](https://doi.org/10.5281/zenodo.21401796) |
+| Active power export capacity (100 MW claim) | Bat Cave BESS (100 MW / 100 MWh, US-TX) | Not Demonstrated (Bounded) | [10.5281/zenodo.21401795](https://doi.org/10.5281/zenodo.21401795) |
+| Energy storage capacity (100 MWh claim) | Bat Cave BESS (100 MW / 100 MWh, US-TX) | Not Demonstrated (Not Verified) | [10.5281/zenodo.21401795](https://doi.org/10.5281/zenodo.21401795) |
+| SoC telemetry consistency | Bat Cave BESS | Inconsistent (1.22% pass rate; mean consistency ratio: 0.6339) | [10.5281/zenodo.21401795](https://doi.org/10.5281/zenodo.21401795) |
+| SoC telemetry semantics | Bat Cave BESS | Deferred (Peak SoC observed = 102.95 MWh, +2.95 MWh above nameplate) | [10.5281/zenodo.21401795](https://doi.org/10.5281/zenodo.21401795) |
 | FCA regime transition from July 2025 | ECO STOR Bollingstedt BESS (103.5 MW, DE) | Verified with Limitations | [10.5281/zenodo.21135862](https://doi.org/10.5281/zenodo.21135862) |
 | "Grid limits never violated" | ECO STOR Bollingstedt BESS | Verified with Limitations | [10.5281/zenodo.21135862](https://doi.org/10.5281/zenodo.21135862) |
 | Netzdienlich (grid-supportive) operation | ECO STOR Bollingstedt BESS | Consistent with claim; intent not distinguishable from price-driven dispatch | [10.5281/zenodo.21135862](https://doi.org/10.5281/zenodo.21135862) |
